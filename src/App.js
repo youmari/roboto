@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
+import Scroll from './Scroll';
 import 'tachyons';
 import './App.css';
 
@@ -36,7 +37,9 @@ constructor(){
       <div className="tc">
         <h1 className='f1'>ROBOFRIEND</h1>
         <SearchBox searchchange={this.onsearchchange} />
-        <CardList  robots={filterrobots}/>
+        <Scroll>
+          <CardList  robots={filterrobots}/>
+        </Scroll>
       </div>
       )
   }
